@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :comments
   get 'pages/info'
   root to: 'ideas#index'
   resources :ideas
+  resources :comments, only: [:create, :destroy]
 end
